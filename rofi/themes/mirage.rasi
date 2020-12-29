@@ -20,9 +20,9 @@
     mirage-fg:                 #D6BA78;
     mirage-fg-selected:        #0e1016;
     mirage-urgent:             #960E0E;
-    mirage-urgent-selected:    #830C0C;
-    mirage-selected:           #CB9F48;
-    mirage-active:             #AF8531;
+    mirage-urgent-selected:    #5D0909;
+    mirage-selected:           #0D6EDE;
+    mirage-active:             #084387;
     mirage-border:             #a89984;
 
     /* Theme colors */
@@ -38,17 +38,17 @@
     alternate-normal-background: @background;
     alternate-normal-foreground: @foreground;
     selected-normal-background:  @mirage-selected;
-    selected-normal-foreground:  @mirage-fg-selected;
+    selected-normal-foreground:  @mirage-fg;
 
     active-background:           @mirage-selected;
-    active-foreground:           @mirage-fg-selected;
+    active-foreground:           @mirage-fg;
     alternate-active-background: @active-background;
     alternate-active-foreground: @active-foreground;
     selected-active-background:  @mirage-active;
     selected-active-foreground:  @active-foreground;
 
     urgent-background:           @mirage-urgent;
-    urgent-foreground:           @background;
+    urgent-foreground:           @mirage-fg-selected;
     alternate-urgent-background: @urgent-background;
     alternate-urgent-foreground: @urgent-foreground;
     selected-urgent-background:  @mirage-urgent-selected;
