@@ -1,0 +1,78 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + r
+	alacritty
+
+# program launcher
+super + b
+	rofi -show run
+
+# Firefox launcher
+super + w
+	firefox
+
+# Open Files
+super + e
+	alacritty -e ranger
+
+#Open Thunar
+super + shift + e
+	thunar
+
+# Open Atom
+super + c
+	atom
+
+#Open Krita
+super + d
+	krita
+
+#Screenshot
+super + p
+	import -window root ~/screen.jpg
+
+#Music
+super + m
+	alacritty -e mocp
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + k
+	bspc quit
+
+# kill
+super + q
+	bspc node -c
+
+super + shift + q
+	bspc node -c
+
+#
+# state/flags
+#
+
+# set the window state
+super + f
+	bspc desktop -l next
+
+#
+# focus/swap
+#
+
+# focus the next/previous desktop in the current monitor
+super + shift + {a,d}
+	bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + ctrl + {a,d}
+	bspc node -d {prev,next}.local
+
+# focus the next/previous window in the current desktop
+super + shift + {w,s}
+	bspc node -f {prev,next}.local

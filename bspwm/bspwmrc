@@ -1,0 +1,33 @@
+#! /bin/sh
+
+# Environment configuration
+xrandr --newmode "1920x1080"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+xrandr --addmode Virtual1 1920x1080
+xrandr --output Virtual1 --mode 1920x1080
+
+nitrogen --set-zoom-fill ~/backgrounds/steezyaf.jpg
+setxkbmap -layout ca -variant multi
+
+sxhkd &
+~/.config/polybar/launch.sh
+picom &
+
+# Bspwm configuration
+bspc monitor -d I II III
+
+bspc config border_width          1
+bspc config window_gap            28
+
+bspc config split_ratio           0.5
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true
+
+#Bspwm colours
+bspc config focused_border_color  "#F5B700"
+#bspc config focused_border_color  "#00CBFF"
+bspc config normal_border_color   "#151E32"
+
+#Bspwm rules
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
