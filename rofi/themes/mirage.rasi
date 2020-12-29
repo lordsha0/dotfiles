@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Rofi color theme
+
+   Based of the Gruvbox-dark color scheme for Rofi by bardisty
+   https://github.com/bardisty/gruvbox-rofi
+
+   File: mirage.rasi
+   Desc: Mirage color theme for Rofi
+   Author: lordsha0
+   Source: https://github.com/lorsha0/mirage-rofi
+   ========================================================================== */
+
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Mirage colors */
+    mirage-bg:                 #0e10165c;
+    mirage-fg:                 #D6BA78;
+    mirage-fg-selected:        #0e1016;
+    mirage-urgent:             #960E0E;
+    mirage-urgent-selected:    #830C0C;
+    mirage-selected:           #CB9F48;
+    mirage-active:             #AF8531;
+    mirage-border:             #a89984;
+
+    /* Theme colors */
+    background:                  @mirage-bg;
+    background-color:            @background;
+    foreground:                  @mirage-fg;
+    border-color:                @mirage-border;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @mirage-selected;
+    selected-normal-foreground:  @mirage-fg-selected;
+
+    active-background:           @mirage-selected;
+    active-foreground:           @mirage-fg-selected;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @mirage-active;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @mirage-urgent;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @mirage-urgent-selected;
+    selected-urgent-foreground:  @urgent-foreground;
+  }
+
+  window {
+  background-color: @background;
+  border:           2;
+  border-radius:    2;
+  padding:          2;
+  }
+
+  mainbox {
+  border:  0;
+  padding: 3;
+  }
+
+  message {
+  border:       2px 0 0;
+  border-color: @separatorcolor;
+  padding:      1px;
+  }
+
+  textbox {
+  highlight:  @highlight;
+  text-color: @foreground;
+  }
+
+  listview {
+  border:       2px solid 0 0;
+  padding:      2px 0 0;
+  border-color: @separatorcolor;
+  spacing:      2px;
+  scrollbar:    @scrollbar;
+  }
+
+  element {
+  border:  0;
+  padding: 2px;
+  }
+
+  element.normal.normal {
+  background-color: @normal-background;
+  text-color:       @normal-foreground;
+  }
+
+  element.normal.urgent {
+  background-color: @urgent-background;
+  text-color:       @urgent-foreground;
+  }
+
+  element.normal.active {
+  background-color: @active-background;
+  text-color:       @active-foreground;
+  }
+
+  element.selected.normal {
+  background-color: @selected-normal-background;
+  text-color:       @selected-normal-foreground;
+  }
+
+  element.selected.urgent {
+  background-color: @selected-urgent-background;
+  text-color:       @selected-urgent-foreground;
+  }
+
+  element.selected.active {
+  background-color: @selected-active-background;
+  text-color:       @selected-active-foreground;
+  }
+
+  element.alternate.normal {
+  background-color: @alternate-normal-background;
+  text-color:       @alternate-normal-foreground;
+  }
+
+  element.alternate.urgent {
+  background-color: @alternate-urgent-background;
+  text-color:       @alternate-urgent-foreground;
+  }
+
+  element.alternate.active {
+  background-color: @alternate-active-background;
+  text-color:       @alternate-active-foreground;
+  }
+
+  scrollbar {
+  width:        4px;
+  border:       0;
+  handle-color: @scrollbar-handle;
+  handle-width: 8px;
+  padding:      0;
+  }
+
+  mode-switcher {
+  border:       2px 0 0;
+  border-color: @separatorcolor;
+  }
+
+  inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+  }
+
+  case-indicator, entry, prompt, button {
+    spacing:    0;
+    text-color: @normal-foreground;
+  }
+
+  button.selected {
+  background-color: @selected-normal-background;
+  text-color:       @selected-normal-foreground;
+  }
+
+  textbox-prompt-sep {
+  expand:     false;
+  str:        ":";
+  text-color: @normal-foreground;
+  margin:     0 0.3em 0 0;
+  }

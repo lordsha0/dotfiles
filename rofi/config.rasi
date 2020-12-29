@@ -1,0 +1,9 @@
+configuration 
+{
+    modi: "window,drun";
+    yoffset: -60;
+    width: 30;
+    lines: 6;
+    theme: "mirage";
+    font: "FiraMono 13";
+}
