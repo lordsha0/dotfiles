@@ -2,7 +2,7 @@ set recolor-lightcolor "#212733"
 
 set statusbar-bg "#212733"
 
-set font "FiraSans 11"
+set font "FiraMono 11"
 
 set adjust-open "width"
 set pages-per-row 1
