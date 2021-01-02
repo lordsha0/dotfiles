@@ -17,7 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #CC180C30
+;background = #CC180C30
+background = #E0212733
 background-alt = #00FFFFFF
 foreground = #EAE0D5
 foreground-alt = #161616
@@ -33,7 +34,7 @@ height = 30
 offset-x = 22%
 offset-y = 10
 radius = 16
-fixed-center = false
+fixed-center = true
 
 modules-left = bspwm
 modules-right = filesystem memory cpu
@@ -191,14 +192,12 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = [cpu:%percentage:2%%]
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = [mem: %percentage_used%%]
 
@@ -250,7 +249,6 @@ date-alt = " %Y/%m/%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 
 label = %date% %time%
