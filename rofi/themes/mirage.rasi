@@ -16,13 +16,13 @@
     scrollbar: true;
 
     /* Mirage colors */
-    mirage-bg:                 #0e10165c;
+    mirage-bg:                 #2127335c;
     mirage-fg:                 #D6BA78;
-    mirage-fg-selected:        #0e1016;
+    mirage-fg-selected:        #381F03;
     mirage-urgent:             #960E0E;
     mirage-urgent-selected:    #5D0909;
-    mirage-selected:           #0D6EDE;
-    mirage-active:             #084387;
+    mirage-selected:           #AB80EC;
+    mirage-active:             #503C6D;
     mirage-border:             #a89984;
 
     /* Theme colors */
@@ -38,17 +38,17 @@
     alternate-normal-background: @background;
     alternate-normal-foreground: @foreground;
     selected-normal-background:  @mirage-selected;
-    selected-normal-foreground:  @mirage-fg;
+    selected-normal-foreground:  @mirage-fg-selected;
 
     active-background:           @mirage-selected;
-    active-foreground:           @mirage-fg;
+    active-foreground:           @mirage-fg-selected;
     alternate-active-background: @active-background;
     alternate-active-foreground: @active-foreground;
     selected-active-background:  @mirage-active;
-    selected-active-foreground:  @active-foreground;
+    selected-active-foreground:  @mirage-fg;
 
     urgent-background:           @mirage-urgent;
-    urgent-foreground:           @mirage-fg-selected;
+    urgent-foreground:           @mirage-fg;
     alternate-urgent-background: @urgent-background;
     alternate-urgent-foreground: @urgent-foreground;
     selected-urgent-background:  @mirage-urgent-selected;
