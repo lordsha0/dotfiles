@@ -11,6 +11,7 @@ setxkbmap -layout ca -variant multi
 sxhkd &
 ~/.config/polybar/launch.sh
 picom &
+dunst &
 
 # Bspwm configuration
 bspc monitor -d I II III
