@@ -7,8 +7,8 @@ super + r
 	alacritty
 
 # program launcher
-super + b
-	rofi -show run
+super + space
+	rofi -show drun
 
 # Firefox launcher
 super + w
@@ -26,17 +26,37 @@ super + shift + e
 super + c
 	atom
 
-#Open Krita
-super + d
-	krita
-
 #Screenshot
 super + p
 	import -window root ~/screen.jpg
 
-#Music
+#
+# music hotkeys
+#
+
+# Open music player
 super + m
-	alacritty -e mocp
+	alacritty -e mocp -m
+
+# Previous song
+super + 1
+    mocp -r
+
+# Pause/Play song
+super + 2
+    mocp -G
+
+# Next song
+super + 3
+    mocp -f
+
+# Toggle repeat
+super + 4
+    mocp -t repeat
+
+# Close music player
+super + shift + m
+    mocp -x
 
 #
 # bspwm hotkeys
@@ -69,10 +89,14 @@ super + f
 super + shift + {a,d}
 	bspc desktop -f {prev,next}.local
 
-# focus or send to the given desktop
+# send to the given desktop
 super + ctrl + {a,d}
 	bspc node -d {prev,next}.local
 
 # focus the next/previous window in the current desktop
 super + shift + {w,s}
 	bspc node -f {prev,next}.local
+
+#send up/down the window in the current desktop
+super + ctrl + {w,s}
+    bspc node -s {prev,next}.local
