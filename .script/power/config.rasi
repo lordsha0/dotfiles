@@ -1,0 +1,8 @@
+configuration 
+{
+    modi: "window,drun";
+    width: 8;
+    lines: 3;
+    theme: "mirage";
+    font: "FiraMono 13";
+}
