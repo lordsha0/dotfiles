@@ -510,6 +510,8 @@ font:
   #- { key: Add,      mods: Control,       action: IncreaseFontSize }
   #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+   - { key: Back,     mods: Control,       chars: "\x1b\x7f"}
+   - { key: L,        mods: Control|Shift, chars: "\x1b[76;5u"}
 
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
