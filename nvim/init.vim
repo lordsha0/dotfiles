@@ -2,6 +2,7 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set scrolloff=9
 
 call plug#begin()
 
