@@ -6,7 +6,7 @@ xrandr --addmode Virtual1 1920x1080
 xrandr --output Virtual1 --mode 1920x1080
 
 nitrogen --set-zoom-fill ~/backgrounds/donut.jpg
-setxkbmap -layout ca -variant multi
+setxkbmap -layout ca -variant multix
 
 sxhkd &
 ~/.config/polybar/launch.sh
